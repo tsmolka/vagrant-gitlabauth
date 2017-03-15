@@ -1,6 +1,4 @@
-require 'rubygems'
 require 'bundler/setup'
-require 'bundler/gem_tasks'
 require 'rspec/core/rake_task'
 
 Dir.chdir(File.expand_path('../', __FILE__))
