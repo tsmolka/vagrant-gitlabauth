@@ -42,5 +42,5 @@ end
 ```
 
 ## References
-[metadata-boxes]: http://docs.vagrantup.com/v2/boxes/format.html
-[vagrant]: http://vagrantup.com
+ - [metadata-boxes](http://docs.vagrantup.com/v2/boxes/format.html)
+ - [vagrant](http://vagrantup.com)
