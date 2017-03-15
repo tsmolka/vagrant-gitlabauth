@@ -1,34 +1,25 @@
 # -*- encoding: utf-8 -*-
-# stub: vagrant-gitlabauth 0.0.1 ruby lib
+$LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
+require 'vagrant-gitlabauth/version'
 
 Gem::Specification.new do |s|
-  s.name = "vagrant-gitlabauth".freeze
-  s.version = "0.0.1"
-
-  s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
-  s.require_paths = ["lib".freeze]
-  s.authors = ["Tobias".freeze, "et al".freeze]
-  s.date = "2017-03-14"
-  s.email = ["tsmolka@gmail.com".freeze]
-  s.homepage = "https://github.com/tsmolka/vagrant-gitlabauth".freeze
-  s.licenses = ["GPL-2.0".freeze]
-  s.rubygems_version = "2.6.10".freeze
-  s.summary = "Private, versioned Vagrant boxes hosted via LFS in GitLab.".freeze
-
-  s.installed_by_version = "2.6.10" if s.respond_to? :installed_by_version
-
-  if s.respond_to? :specification_version then
-    s.specification_version = 4
-
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<bundler>.freeze, ["~> 1.5"])
-      s.add_development_dependency(%q<rake>.freeze, ["~> 12.0"])
-    else
-      s.add_dependency(%q<bundler>.freeze, ["~> 1.5"])
-      s.add_dependency(%q<rake>.freeze, ["~> 12.0"])
-    end
-  else
-    s.add_dependency(%q<bundler>.freeze, ["~> 1.5"])
-    s.add_dependency(%q<rake>.freeze, ["~> 12.0"])
-  end
+  s.name = "vagrant-gitlabauth"
+  s.version = VagrantPlugins::GitLabAuth::VERSION
+  s.authors = ["Tobias", "et al"]
+  s.email = ["tsmolka@gmail.com"]
+  s.summary = "Private, versioned Vagrant boxes hosted via LFS in GitLab."
+  s.homepage = "https://github.com/tsmolka/vagrant-gitlabauth"
+  s.licenses = ["GPL-2.0"]
+  
+  s.files = `git ls-files -z`.split("\x0")
+  s.test_files = s.files.grep(/spec/)
+  s.require_paths = ['lib']
+  
+  s.add_dependency 'i18n'
+  
+  s.add_development_dependency 'bundler', '~> 1.5'
+  s.add_development_dependency 'rake', '< 11.0'  
+  s.add_development_dependency 'rspec-core'
+  s.add_development_dependency 'rspec-mocks'
+  s.add_development_dependency 'rspec-expectations'
 end
