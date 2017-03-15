@@ -1,0 +1,7 @@
+en:
+  vagrant_gitlabauth:
+    errors:
+      missing_credentials: |-
+        ERROR: Unable to find GitLab credentials
+        
+        Ensure PRIVATE_TOKEN variable is set in your environment, or set it at the top of your Vagrantfile.
